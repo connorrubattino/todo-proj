@@ -1,6 +1,3 @@
-
-
-
 class Task:
     id_counter = 1
 
@@ -13,7 +10,6 @@ class Task:
     def __str__(self):
         return f'Task {self.id}: {self.status} - {self.description}'
     
-
 class ToDo:
 
     def __init__(self):
@@ -32,7 +28,6 @@ class ToDo:
         self.tasks.append(new_task)
         print(f'Your new task:\n\t{new_task}\nhas been created')
 
-
     def view(self):
         if self.tasks:
             for task in self.tasks:
@@ -48,8 +43,6 @@ class ToDo:
             if task.id == int(task_id):
                 return task
         print(f"Task with an ID of {task_id} does not exist")
-
-
 
     def edit(self):
         task = self.__get_task_from_id()
@@ -70,7 +63,6 @@ class ToDo:
         else:
             print('No task found with that ID')
 
-
     def delete(self):
         task = self.__get_task_from_id()
         if task:
@@ -83,12 +75,10 @@ class ToDo:
         else:
             print('No task found with that ID')
 
-
     def retrieve(self):
         task = self.__get_task_from_id()
         if task:
             print(task)
-
 
 def todo_list():
     print('Welcome to your To-Do list - let\'s have a day!')
@@ -111,7 +101,5 @@ def todo_list():
         if choice == '6':
             break
     print("Thank you for using the To-Do list - have a wonderful day!")
-
-    
 
 todo_list()
